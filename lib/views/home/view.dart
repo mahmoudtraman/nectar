@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:nectar_app/core/extensions/num.dart';
 import 'package:nectar_app/core/extensions/string.dart';
 import 'package:nectar_app/core/utils/colors.dart';
 import 'package:nectar_app/widgets/app/product_card.dart';
@@ -8,7 +7,6 @@ import 'package:nectar_app/widgets/app/section_title.dart';
 import 'package:nectar_app/widgets/app_carousel.dart';
 import 'package:nectar_app/widgets/app_text.dart';
 import 'package:nectar_app/widgets/app_text_field.dart';
-
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -20,8 +18,12 @@ class HomeView extends StatelessWidget {
         centerTitle: true,
         title: Image.asset(
           'logo'.assetPNG,
-          height: 32.height,
-          width: 32.width,
+          height: 32,
+          width: 32,
+        ),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.of(context).pop(),
         ),
       ),
       body: Padding(
@@ -35,24 +37,24 @@ class HomeView extends StatelessWidget {
                   FontAwesomeIcons.locationPin,
                   color: AppColors.darkGrey,
                 ),
-                SizedBox(width: 8.width),
+                SizedBox(width: 8),
                 AppText(
                   title: 'Mansoura, Egypt',
-                  fontSize: 18.font,
+                  fontSize: 18,
                   fontWeight: FontWeight.w600,
                   color: AppColors.darkGrey,
                 ),
               ],
             ),
-            SizedBox(height: 20.height),
+            SizedBox(height: 20),
             AppTextField(
               leading: Icon(
                 FontAwesomeIcons.magnifyingGlass,
-                size: 20.height,
+                size: 20,
               ),
               hint: "Search",
             ),
-            SizedBox(height: 20.height),
+            SizedBox(height: 20),
             Expanded(
               child: ListView(
                 padding: EdgeInsets.zero,
@@ -63,12 +65,15 @@ class HomeView extends StatelessWidget {
                       'https://cdn.britannica.com/39/187439-050-35BA4DCA/Broccoli-florets.jpg',
                       'https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-2foodgroups_vegetables_detailfeature.jpg?sfvrsn=226f1bc7_6'
                     ],
+                    width: double.infinity,
+                    height: 200,
+                    borderRadius: BorderRadius.circular(0),
                   ),
-                  SizedBox(height: 20.height),
+                  SizedBox(height: 20),
                   SectionTitle(
                     title: 'Exclusive Offers',
                   ),
-                  SizedBox(height: 20.height),
+                  SizedBox(height: 20),
                   SizedBox(
                     height: ProductCard.height,
                     child: ListView.separated(
@@ -91,14 +96,14 @@ class HomeView extends StatelessWidget {
                           );
                         }
                       },
-                      separatorBuilder: (context, index) => SizedBox(width: 16.width),
+                      separatorBuilder: (context, index) => SizedBox(width: 16),
                     ),
                   ),
-                  SizedBox(height: 20.height),
+                  SizedBox(height: 20),
                   SectionTitle(
                     title: 'Best Selling',
                   ),
-                  SizedBox(height: 20.height),
+                  SizedBox(height: 20),
                   SizedBox(
                     height: ProductCard.height,
                     child: ListView.separated(
@@ -121,7 +126,7 @@ class HomeView extends StatelessWidget {
                           );
                         }
                       },
-                      separatorBuilder: (context, index) => SizedBox(width: 16.width),
+                      separatorBuilder: (context, index) => SizedBox(width: 16),
                     ),
                   ),
                 ],

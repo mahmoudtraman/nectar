@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nectar_app/core/extensions/num.dart';
-
-
 import '../../core/utils/colors.dart';
-
 import '../app_text.dart';
 import 'product_detail.dart';
 

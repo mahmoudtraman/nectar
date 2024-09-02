@@ -6,7 +6,7 @@ import 'package:nectar_app/core/extensions/num.dart';
 import '../core/utils/colors.dart';
 
 class AppCarousel extends StatefulWidget {
-  const AppCarousel({Key? key, required this.images}) : super(key: key);
+  const AppCarousel({Key? key, required this.images, required double width, required int height, required BorderRadius borderRadius}) : super(key: key);
 
   final List<String> images;
 
