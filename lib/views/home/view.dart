@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import 'package:nectar_app/core/extensions/num.dart';
 import 'package:nectar_app/core/extensions/string.dart';
-import '../../core/utils/colors.dart';
-import '../../widgets/app/product_card.dart';
-import '../../widgets/app/section_title.dart';
-import '../../widgets/app_carousel.dart';
-import '../../widgets/app_text.dart';
-import '../../widgets/app_text_field.dart';
+import 'package:nectar_app/core/utils/colors.dart';
+import 'package:nectar_app/widgets/app/product_card.dart';
+import 'package:nectar_app/widgets/app/section_title.dart';
+import 'package:nectar_app/widgets/app_carousel.dart';
+import 'package:nectar_app/widgets/app_text.dart';
+import 'package:nectar_app/widgets/app_text_field.dart';
+
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -17,6 +17,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Image.asset(
           'logo'.assetPNG,
           height: 32.height,
